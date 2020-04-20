@@ -1,0 +1,1 @@
+Try Visual Studio Cover
