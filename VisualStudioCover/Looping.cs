@@ -8,316 +8,333 @@ namespace VisualStudioCover
 {
     public class Looping
     {
-        public int loop1(int start, int end, int interval)
+        public void OutputBintang_21(int N)
         {
             int i;
-            int total = 0;
-            for (i = start; i <= end; i += interval)
-            {
-                total += i;
-            }
 
-            return total;
+            for (i = 1; i <= N; i++)
+            {
+                Console.WriteLiine("*");
+            }
         }
 
-        public int loop2(int start, int end, int interval)
+        public int jumBil_22(int bil[], int N)
         {
-            int i = start;
-            int total = 0;
-            while (i <= end)
-            {
-                total += i;
-                i += interval;
-            }
+            int i, sum;
 
-            return total;
+            sum = 0;
+            i = 0;
+            while (i < N)
+            {
+                sum = sum + bil[i];
+                i = i + 1;
+            }
+            return sum;
         }
 
-        public int loop3(int start, int end, int interval)
+        public int jumBil_23(int N)
         {
-            int i = start;
-            int total = 0;
+            int sum, i;
+
+            sum = 0;
+            i = 0;
             do
             {
-                total += i;
-                i += interval;
-            } while (i <= end);
-
-            return total;
+                sum = sum + 1;
+                i = i + 1;
+            } while (i <= N);
+            return sum;
         }
 
-        public int loop4(String text)
+        public void outputFaktorlBilangan_24(int nilai)
         {
-            int len = text.Length;
-            int i = 0;
-            int count = 0;
-            text = text.ToLower();
-            for (i = 0; i < len; i++)
+            int i;
+
+            Console.WriteLine("Faktor-faktornya:");
+            for (i = nilai; i >= 1; i--)
             {
-                if (text[i] == 'a')
+                if (nilai % i == 0)
                 {
-                    count += 1;
+                    Console.WriteLine(i /* tampilkan bilangan ketika nilainya
+                                    * merupakan modulus dari nilai yang dicari
+                                    */
+                                     + " ");
                 }
             }
-
-            return count;
         }
 
-        public int loop5(String text)
+        public boolean cariBil_25(int bil[], int N, int cari)
         {
-            int len = text.Length;
-            int i = 0;
-            int count = 0;
-            text = text.ToLower();
-            while (i < len)
+            int i;
+            boolean ketemu = false;
+
+            i = 0;
+            while (i < N || ketemu == true)
             {
-                if (text[i] == 'a')
+                if (bil[i] == cari)
                 {
-                    count += 1;
+                    ketemu = true;
                 }
+                i = i + 1;
             }
-
-            return count;
+            return ketemu;
         }
 
-        public int loop6(String text)
+        public void OutputDeretGanjilGenap_27(int N)
         {
-            int len = text.Length;
-            int i = 0;
-            int count = 0;
-            text = text.ToLower();
-            do
-            {
-                if (text[i] == 'a')
-                {
-                    count += 1;
-                }
-            } while (i < len);
+            int i, nGanjil, nGenap;
+            int[] deretGanjil = new int[N];
+            int[] deretGenap = new int[N];
 
-            return count;
-        }
-
-        public int loop7(String text)
-        {
-            int len = text.Length;
-            int i = 0;
-            int stack = 0;
-            text = text.ToLower();
-            for (i = 0; i < len; i++)
+            nGanjil = 0;
+            nGenap = 0;
+            for (i = 1; i <= N; i++)
             {
-                if (text[i] == '(')
+                if (i % 2 > 0)
                 {
-                    stack += 1;
+                    deretGanjil[nGanjil] = i;
+                    nGanjil = nGanjil + 1;
                 }
                 else
                 {
-                    stack -= 1;
+                    deretGenap[nGenap] = i;
+                    nGanjil = nGenap + 1;
                 }
             }
-
-            // Return 0 kalau '(' dan ')' jumlahnya sama
-            return stack;
+            Console.WriteLine("Deret Ganjil");
+            for (i = 0; i < nGanjil; i++)
+            {
+                Console.WriteLine(deretGanjil[i] + " ");
+            }
+            Console.WriteLine("Deret Genap");
+            for (i = 0; i < nGenap; i++)
+            {
+                Console.WriteLine(deretGenap[i] + " ");
+            }
         }
 
-        public int loop8(String text)
+        public boolean guessNumber_28(int guessBil[], int N, int secret)
         {
-            int len = text.Length;
-            int i = 0;
-            int stack = 0;
-            text = text.ToLower();
-            while (i < len)
+            int i;
+            boolean ketemu = false;
+
+            i = 0;
+            while (i < N || ketemu == true)
             {
-                if (text[i] == '(')
+                if (guessBil[i] < secret)
                 {
-                    stack += 1;
+                    Console.WriteLine("Sorry, your guess (" + guessBil[i] + ") is too low.");
+                    Console.WriteLine(" Try again.\n> ");
+                }
+                else if (guessBil[i] > secret)
+                {
+                    Console.WriteLine("Sorry, your guess (" + guessBil[i] + ") is too high.");
+                    Console.WriteLine(" Try again.\n> ");
                 }
                 else
                 {
-                    stack -= 1;
+                    Console.WriteLine("Yeaa, your guess (" + guessBil[i] + ") is right.");
+                    Console.WriteLine("secret = " + secret);
+                    ketemu = true;
                 }
+                i = i + 1;
             }
-
-            // Return 0 kalau '(' dan ')' jumlahnya sama
-            return stack;
+            return ketemu;
         }
 
-        public int loop9(String text)
+        public void OutputPolaXYZ29(int N, int X)
         {
-            int len = text.Length;
-            int i = 0;
-            int stack = 0;
-            text = text.ToLower();
+            // prekondisi N dan X tidak bernilai 0 
+            // menampilkan pola bilangan dari 1 s.d. N
+            // dimana bilangan yang berkelipatan value dari X diganti dengan bintang
+            // contoh : 15, 3 --> output : 1 2 * 4 5 * 7 8 * 10 11 * 13 14 * 
+
+            int i;
+            i = 1;
             do
             {
-                if (text[i] == '(')
+                if (i % X == 0)
                 {
-                    stack += 1;
+                    Console.WriteLine("* ");
                 }
                 else
                 {
-                    stack -= 1;
+                    Console.WriteLine(i + " ");
                 }
-            } while (i < len);
-
-            // Return 0 kalau '(' dan ')' jumlahnya sama
-            return stack;
+            } while (i <= N);
         }
 
-        public int loop10(String text)
+        public void OutputCountBilPencacah_30(int[] bil, int N, int cari)
         {
-            int len = text.Length;
-            int i = 0;
-            int hole = 0;
-            text = text.ToUpper();
+            // menghitung nilai pencacah bilangan dari kumpulan bilangan
+            // nilai pencacah bilangan antara 1 s.d 10, lebih dari itu tidak dihitung
+            // contoh : isi bil 1, 1, 2, 15
+            // nilai 1 ada 2, nilai 2 ada 1 dan tidak terdefinisi ada 1
 
-            for (i = 0; i < len; i++)
+            int i, count1, count2, count3, count4, count5, count6;
+            int count7, count8, count9, count10, countUnd;
+
+            count1 = 0;
+            count2 = 0;
+            count3 = 0;
+            count4 = 0;
+            count5 = 0;
+            count6 = 0;
+            count7 = 0;
+            count8 = 0;
+            count9 = 0;
+            count10 = 0;
+            countUnd = 0;
+            for (i = 0; i < N; i++)
             {
-                switch (text[i])
+                switch (bil[i])
                 {
-                    case 'A':
-                    case 'D':
-                    case 'O':
-                    case 'P':
-                    case 'Q':
-                    case 'R':
-                        hole += 1;
-                        break;
-                    case 'B':
-                        hole += 2;
-                        break;
+                    case 1: count1 = count1 + 1; break;
+                    case 2: count2 = count2 + 1; break;
+                    case 3: count3 = count3 + 1; break;
+                    case 4: count4 = count4 + 1; break;
+                    case 5: count5 = count5 + 1; break;
+                    case 6: count6 = count6 + 1; break;
+                    case 7: count7 = count7 + 1; break;
+                    case 8: count8 = count8 + 1; break;
+                    case 9: count9 = count9 + 1; break;
+                    case 10: count10 = count10 + 1; break;
+                    default: countUnd = countUnd + 1; break;
                 }
             }
 
-            return hole;
+            Console.WriteLine("pencacah 1 = " + count1);
+            Console.WriteLine("pencacah 2 = " + count2);
+            Console.WriteLine("pencacah 3 = " + count3);
+            Console.WriteLine("pencacah 4 = " + count4);
+            Console.WriteLine("pencacah 5 = " + count5);
+            Console.WriteLine("pencacah 6 = " + count6);
+            Console.WriteLine("pencacah 7 = " + count7);
+            Console.WriteLine("pencacah 8 = " + count8);
+            Console.WriteLine("pencacah 9 = " + count9);
+            Console.WriteLine("pencacah 10 = " + count10);
+            Console.WriteLine("pencacah diluar 1.d. 10 = " + countUnd);
+
         }
 
-        public int loop11(String text)
+        public int OutputCalculateDeretBilBaseOnOp_31(int[] bil, int N, char op)
         {
-            int len = text.Length;
-            int i = 0;
-            int hole = 0;
-            text = text.ToUpper();
+            // mengirimlkan hasil kalkulasi dari deret bilangan berdasarkan operatornya (+, -, *)
+            // Contoh : Bil = [1, 5, 7, 10] dan op = +
+            // Output = 23
 
-            while (i < len)
+            int result = 0;
+            int i = 0;
+
+            while (i < N)
             {
-                switch (text[i])
+                switch (op)
                 {
-                    case 'A':
-                    case 'D':
-                    case 'O':
-                    case 'P':
-                    case 'Q':
-                    case 'R':
-                        hole += 1;
-                        break;
-                    case 'B':
-                        hole += 2;
-                        break;
+                    case '+': result = result + bil[i]; break;
+                    case '-': result = result - bil[i]; break;
+                    case '*': result = result * bil[i]; break;
                 }
+                i = i + 1;
             }
 
-            return hole;
+            return result;
         }
 
-        public int loop12(String text)
+        public String konversiDesToBiner_32(int bil)
         {
-            int len = text.Length;
-            int i = 0;
-            int hole = 0;
-            text = text.ToUpper();
+            int sisa;
+            String biner;
 
+            biner = " ";
             do
             {
-                switch (text[i])
+                sisa = bil % 2;
+                bil = bil / 2;
+                switch (sisa)
                 {
-                    case 'A':
-                    case 'D':
-                    case 'O':
-                    case 'P':
-                    case 'Q':
-                    case 'R':
-                        hole += 1;
-                        break;
-                    case 'B':
-                        hole += 2;
-                        break;
+                    case 0: biner = "0" + biner; break;
+                    case 1: biner = "1" + biner; break;
                 }
-            } while (i < len);
-
-            return hole;
+            } while (bil > 0);
+            return biner;
         }
 
-        public String loop13(int len1, int len2)
+        public void OutputBintangSegiempat_33(int N)
         {
-            int i = 0;
-            int j = 0;
-            String str = "";
-            for (i = 0; i < len1; i++)
+            int i, j;
+
+            for (i = 1; i <= N; i++)
             {
-                str = str + "(";
-                for (j = 0; j < len2; j++)
+                for (j = 1; j <= i; j++)
                 {
-                    str = str + "+";
+                    Console.WriteLine("*");
                 }
-                str = str + ")";
+                Console.WriteLine();
             }
-
-            return str;
         }
 
-        public String loop14(int len1, int len2)
+        public void OutputBintangSegitiga_34(int N)
         {
-            int i = 0;
-            int j = 0;
-            String str = "";
-            while (i < len1)
+            int i, j;
+
+            i = 1;
+            while (i <= N)
             {
-                str = str + "(";
-                for (j = 0; j < len2; j++)
+                for (j = 1; j <= i; j++)
                 {
-                    str = str + "+";
+                    Console.WriteLine("*");
                 }
-                str = str + ")";
+                Console.WriteLine();
+                i = i + 1;
             }
-
-            return str;
         }
 
-        public String loop15(int len1, int len2)
+        public char[] geserBilKiri_36(char str[], int N, int nGeser)
         {
-            int i = 0;
-            int j = 0;
-            String str = "";
-            do
-            {
-                str = str + "(";
-                for (j = 0; j < len2; j++)
-                {
-                    str = str + "+";
-                }
-                str = str + ")";
-            } while (i < len1);
+            // Geser 3 kali
+            // str --> 1, 2, 5, 7
+            // 1 : 7, 1, 2, 5
+            // 2 : 5, 7, 1, 2
+            // 3 : 2, 5, 7, 1
 
-            return str;
-        }
+            int i, j;
+            char temp;
 
-        public String loop16(int len1, int len2)
-        {
-            int i = 0;
-            int j = 0;
-            String str = "";
-            for (i = 0; i < len1; i++)
+            for (i = 1; i <= nGeser; i++)
             {
-                str = str + "(";
-                j = 0;
-                while (j < len2)
+                temp = str[N - 1];
+                j = N - 1;
+                while (j > 0)
                 {
-                    str = str + "+";
-                    j += 1;
+                    str[j] = str[j - 1];
+                    j = j - 1;
                 }
-                str = str + ")";
+                str[j] = temp;
             }
             return str;
+        }
+
+        public void OutputBintangSegitigaTerbalik_37(int N)
+        {
+            int i, j;
+
+            i = 1;
+            while (i <= N)
+            {
+                j = 1;
+                while (j < i)
+                {
+                    Console.WriteLine(" ");
+                    j = j + 1;
+                }
+                while (j <= N)
+                {
+                    Console.WriteLine("*");
+                    j = j + 1;
+                }
+                Console.WriteLine();
+                i = i + 1;
+            }
         }
     }
 }
