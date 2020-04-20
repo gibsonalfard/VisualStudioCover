@@ -8,244 +8,284 @@ namespace VisualStudioCover
 {
     public class Selection
     {
-        public int select1(int x, int y)
+        public int cariMax3Bil_05(int A, int B, int C)
         {
-            double result;
-            if (x > y)
+            int max;
+
+            max = A;
+            if (max < B)
             {
-                x += 2;
+                max = B;
             }
-
-            result = (x - y) + (Math.Pow(y, 2));
-
-            return (int)result;
+            if (max < C)
+            {
+                max = C;
+            }
+            return max;
         }
 
-        public double select2(int x, int y)
+        public char hitNilaiMutu_06(double uts, double uas, double tugas, int hadir)
         {
-            int res = 0;
-            if (x > y)
+            char nilaiMutu = ' ';
+            float nilai, nilaiHadir;
+
+            nilaiHadir = hadir / 14 * 100f;
+            nilai = (float)((0.3 * uts) + (0.4 * uas) + (0.2 * tugas) + (0.1 * nilaiHadir));
+
+            if (nilai >= 85)
             {
-                res += x % 2;
+                nilaiMutu = 'A';
+            }
+            else if (nilai >= 70)
+            {
+                nilaiMutu = 'B';
+            }
+            else if (nilai >= 55)
+            {
+                nilaiMutu = 'C';
+            }
+            else if (nilai >= 40)
+            {
+                nilaiMutu = 'D';
             }
             else
             {
-                res = (int)Math.Pow(x, 2);
+                nilaiMutu = 'E';
             }
-
-            return res;
+            return nilaiMutu;
         }
 
-        public double select3(int x, int y, int opr)
+        public int getUpah_063(int jamMasuk, int jamKeluar)
         {
-            var result = 0;
-            switch (opr)
-            {
-                case 1: result = x + y; break;
-                case 2: result = x - y; break;
-                case 3: result = x * y; break;
-                case 4: result = x / y; break;
-                default: result = x; break;
-            }
+            int lama, biaya;
 
-            return result;
+            if (jamKeluar > jamMasuk)
+            {
+                lama = jamKeluar - jamMasuk;
+            }
+            else if (jamMasuk > jamKeluar)
+            {
+                lama = 12 - jamMasuk + jamKeluar;
+            }
+            else
+            {
+                lama = 0;
+            }
+            if (lama <= 2)
+            {
+                biaya = 2000;
+            }
+            else
+            {
+                biaya = 2000 + ((lama - 2) * 500);
+            }
+            return biaya;
         }
 
-        public int select4(int x, int saldo, int limit)
+        public void menentukanBilGanjil_064(int bil)
         {
-            if (saldo > x)
+            if (bil % 2 > 0)
             {
-                if (limit > x)
+                Console.WriteLine("Bilangan Ganjil");
+            }
+            else
+            {
+                Console.WriteLine("Bilangan Genap");
+            }
+        }
+
+        public String getDayFromNumber_07(int idxDay)
+        {
+            String day = "";
+
+            switch (idxDay)
+            {
+                case 1: day = "Senin"; break;
+                case 2: day = "Selasa"; break;
+                case 3: day = "Rabu"; break;
+                case 4: day = "Kamis"; break;
+                case 5: day = "Jumat"; break;
+                case 6: day = "Sabtu"; break;
+                case 7: day = "Minggu"; break;
+            }
+            return day;
+        }
+
+        public void tukarNominalUang_08(int nominalUang, int totalBelanja)
+        {
+            int kembalian, pec50K, pec10K, pec5K, pec1K;
+
+            pec50K = 0;
+            pec10K = 0;
+            pec5K = 0;
+            pec1K = 0;
+            if (nominalUang > totalBelanja)
+            {
+                kembalian = totalBelanja - nominalUang;
+
+                if (kembalian > 0)
                 {
-                    return saldo - x;
+                    pec50K = kembalian / 50000;
+                    pec10K = (kembalian % 50000) / 10000;
+                    pec5K = ((kembalian % 50000) % 10000) / 5000;
+                    pec1K = (((kembalian % 50000) % 10000) % 5000) / 1000;
+                }
+                Console.WriteLine("Pecahan 50 ribu :" + pec50K + "lembar");
+                Console.WriteLine("Pecahan 10 ribu :" + pec10K + "lembar");
+                Console.WriteLine("Pecahan 5 ribu :" + pec5K + "lembar");
+                Console.WriteLine("Pecahan seribu :" + pec1K + "lembar");
+            }
+        }
+
+        public int getKuadran_09(int x, int y)
+        {
+            int kuadran = 0;
+            boolean isOnSB = false;
+
+            if (x == 0 && y == 0)
+            {
+                isOnSB = true;
+            }
+            if (!isOnSB)
+            {
+                if (x > 0 && y > 0)
+                {
+                    kuadran = 1;
+                }
+                else if (x < 0 && y > 0)
+                {
+                    kuadran = 2;
+                }
+                else if (x < 0 && y < 0)
+                {
+                    kuadran = 3;
+                }
+                else if (x > 0 && y < 0)
+                {
+                    kuadran = 4;
                 }
             }
-            return -1;
+            return kuadran;
         }
 
-        public bool select5(int year)
+        public void tampilSuhu_10(int suhu)
         {
-            if (year % 4 == 0)
+            if (suhu < 0)
             {
-                if (year % 100 == 0)
+                Console.WriteLine("Cair");
+            }
+            else
+            {
+                if (suhu <= 100)
                 {
-                    if (year % 400 == 0)
+                    Console.WriteLine("Padat");
+                }
+                else
+                {
+                    Console.WriteLine("Gas");
+                }
+            }
+        }
+
+        public int getNumberDayMonth2_10(int idxMonth, int year)
+        {
+            int numDays = 0;
+
+            if ((idxMonth == 1) || (idxMonth == 3) || (idxMonth == 5) || (idxMonth == 1) ||
+                    (idxMonth == 8) || (idxMonth == 10) || (idxMonth == 12))
+            {
+                numDays = 31;
+            }
+            else if ((idxMonth == 4) || (idxMonth == 6) || (idxMonth == 9) || (idxMonth == 11))
+            {
+                numDays = 30;
+            }
+            else if ((idxMonth == 2))
+            {
+                if (((year % 4 == 0) && (year % 100 > 0)) || (year % 400 == 0))
+                {
+                    numDays = 29;
+                }
+                else
+                {
+                    numDays = 28;
+                }
+            }
+            return numDays;
+        }
+
+        public char getSizeKaos_12(int T, int BB)
+        {
+            char size = ' ';
+
+            if (T > 170)
+            {
+                if ((BB > 60) && (BB <= 80))
+                {
+                    size = 'X';
+                }
+            }
+            else
+            {
+                if (T > 150)
+                {
+                    if (BB <= 80)
                     {
-                        return true;
+                        size = 'L';
                     }
                 }
                 else
                 {
-                    return true;
+                    size = 'M';
                 }
             }
 
-            return false;
+            return size;
         }
 
-        public int select6(int x, int saldo, int limit)
+        public int calCulateGajih_17(char gol, int durasiJamKerja)
         {
-            if (saldo < x)
+            int upah = 0;
+            switch (gol)
             {
-                return -1;
+                case 'A':
+                    upah = durasiJamKerja * 10000;
+                    if (durasiJamKerja > 40)
+                    {
+                        upah = upah + (durasiJamKerja * 5000);
+                    }
+                    break;
+                case 'B':
+                    upah = durasiJamKerja * 7500;
+                    if (durasiJamKerja > 40)
+                    {
+                        upah = upah + (durasiJamKerja * 4000);
+                    }
+                    break;
+                case 'C':
+                    upah = durasiJamKerja * 5000;
+                    if (durasiJamKerja > 40)
+                    {
+                        upah = upah + (durasiJamKerja * 3000);
+                    }
+                    break;
+                case 'D':
+                    upah = durasiJamKerja * 2500;
+                    if (durasiJamKerja > 40)
+                    {
+                        upah = upah + (durasiJamKerja * 2000);
+                    }
+                    break;
+                default: Console.WriteLine("Golongan tidak ada"); break;
             }
-            else
-            {
-                if (limit > x)
-                {
-                    return saldo - x;
-                }
-            }
-            return limit;
+            return upah;
         }
 
-        public int select7(int x, int saldo, int limit)
+        public int getNumberDayMonth_18(int idxMonth, int year)
         {
-            var limUtang = 25;
+            int numDays = 0;
 
-            if (saldo > x)
-            {
-                if (limit - x >= 0)
-                {
-                    return saldo - x;
-                }
-            }
-            else
-            {
-                if (Math.Abs(saldo - x) < limUtang)
-                {
-                    return limUtang;
-                }
-            }
-            return -1;
-        }
-
-        public double select8(int amount)
-        {
-            double tax = 0;
-            double tmpAmount = amount;
-            if (amount >= 1000)
-            {
-                if (amount >= 2000)
-                {
-                    tax = (7.5 / 100) * tmpAmount;
-                    tmpAmount -= tax;
-                }
-                tax += (5 / 100) * tmpAmount;
-            }
-            else
-            {
-                if (amount > 500)
-                {
-                    tax = (2.5 / 100) * tmpAmount;
-                }
-                else
-                {
-                    tax = (1 / 100) * tmpAmount;
-                }
-            }
-
-            return tax;
-        }
-
-        public double select9(int amount)
-        {
-            double tax = 0;
-            double tmpAmount = amount;
-            if (amount < 1000)
-            {
-                if (amount > 500)
-                {
-                    tax = (2.5 / 100) * tmpAmount;
-                }
-                else
-                {
-                    tax = (1 / 100) * tmpAmount;
-                }
-            }
-            else
-            {
-                if (amount >= 2000)
-                {
-                    tax = (7.5 / 100) * tmpAmount;
-                    tmpAmount -= tax;
-                }
-                tax += (5 / 100) * tmpAmount;
-            }
-
-            return tax;
-        }
-
-        public int select10(int opsi, int amount, int saldo)
-        {
-            if (opsi != 6)
-            {
-                if (saldo > 120)
-                {
-                    return saldo - 20;
-                }
-                else
-                {
-                    return -2;
-                }
-            }
-            else
-            {
-                if (amount % 20 == 0)
-                {
-                    return saldo - amount;
-                }
-                else
-                {
-                    return -1;
-                }
-            }
-        }
-
-        public int select11(int x, int y, int opsi)
-        {
-            int result = 0;
-            if (opsi > 0)
-            {
-                switch (opsi)
-                {
-                    case 1: result = x + y; break;
-                    case 2: result = x - y; break;
-                    case 3: result = x * y; break;
-                    case 4: result = x / y; break;
-                    default: result = -1; break;
-                }
-            }
-            return result;
-        }
-
-        public String select12(int auth, int menu)
-        {
-            if (auth == 1)
-            {
-                switch (menu)
-                {
-                    case 1: return "This is Your Balance : $1000"; break;
-                    case 2: return "Withdrawal menu"; break;
-                    case 3: return "Transfer Menu"; break;
-                    default: return "Menu not found"; break;
-                }
-            }
-            else
-            {
-                switch (menu)
-                {
-                    case 1: return "Admin menu : Change User Password"; break;
-                    case 2: return "Admin menu : Show monthly report"; break;
-                    default: return "Admin menu : Menu not found"; break;
-                }
-            }
-        }
-
-        public bool select13(int month, int year, int day)
-        {
-            bool valid = true;
-            switch (month)
+            switch (idxMonth)
             {
                 case 1:
                 case 3:
@@ -254,165 +294,315 @@ namespace VisualStudioCover
                 case 8:
                 case 10:
                 case 12:
-                    if (day > 31)
-                    {
-                        valid = false;
-                    }
-                    break;
-                case 2:
-                    if (day > 28)
-                    {
-                        valid = false;
-                    }
+                    numDays = 31;
                     break;
                 case 4:
                 case 6:
                 case 9:
                 case 11:
-                    if (day > 30)
-                    {
-                        valid = false;
-                    }
-                    break;
-                default:
-                    valid = false;
-                    break;
-            }
-            return valid;
-        }
-
-        public bool select14(int month, int year, int day)
-        {
-            bool leap = this.select5(year);
-            bool valid = false;
-            switch (month)
-            {
-                case 1:
-                case 3:
-                case 5:
-                case 7:
-                case 8:
-                case 10:
-                case 12:
-                    if (day >= 31)
-                    {
-                        valid = false;
-                    }
-                    else
-                    {
-                        valid = true;
-                    }
+                    numDays = 30;
                     break;
                 case 2:
-                    if (leap)
-                    {
-                        valid = day <= 29;
-                    }
+                    if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0))
+                        numDays = 29;
                     else
-                    {
-                        valid = day <= 28;
-                    }
-                    break;
-                case 4:
-                case 6:
-                case 9:
-                case 11:
-                    if (day >= 30)
-                    {
-                        valid = false;
-                    }
-                    else
-                    {
-                        valid = true;
-                    }
+                        numDays = 28;
                     break;
                 default:
-                    valid = false;
+                    numDays = 0;
                     break;
             }
-
-            return valid;
+            return numDays;
         }
 
-        public String select15(int number)
+        public void OutputOperasiPilihan_19(char pil, int bil)
         {
-            var mod = number % 2;
-            var text = "";
-            switch (mod)
+            // melakukan operasi sesuai dengan pilihan
+            // Pil A, --> cek bilangan apakah ganjil, genap
+            // Pil B, --> cek bilangan apakah positif, negatif atau bilangan nol
+            // Pil C, --> Pangkat dua, jika bilangan positif
+            // Pil D, --> Absolutkan, jika bilangan negatif
+            // Pil E, --> menampilkan bilangan saja
+            // lain-lain --> inputan salah
+            // tampilkan hasil operasi jika sudah melakukan pengoperasian
+
+            int hasil;
+            switch (pil)
             {
-                case 0:
-                    if (number > 0)
+                case 'A':
+                    if (bil % 2 > 0)
                     {
-                        text = text + "Bilangan Genap Positif, ";
-                    }
-                    if (number > 7)
-                    {
-                        text = text + "Bilangan lebih besar dari 7";
+                        Console.WriteLine("bil (" + bil + ") adalah bilangan Ganjil");
                     }
                     else
                     {
-                        text = text + "Bilangan kecil dari 7";
+                        Console.WriteLine("bil (" + bil + ") adalah bilangan Genap");
                     }
                     break;
-                case 1:
-                    if (number > 0)
+                case 'B':
+                    if (bil > 0)
                     {
-                        text = text + "Bilangan Ganjil Positif, ";
+                        Console.WriteLine("bil (" + bil + ") adalah bilangan Positif");
                     }
-                    if (number > 7)
+                    else if (bil < 0)
                     {
-                        text = text + "Bilangan lebih besar dari 7";
+                        Console.WriteLine("bil (" + bil + ") adalah bilangan Negatif");
                     }
                     else
                     {
-                        text = text + "Bilangan kecil dari 7";
+                        Console.WriteLine("bil (" + bil + ") adalah bilangan nol");
                     }
                     break;
+                case 'C':
+                    if (bil > 0)
+                    {
+                        hasil = bil * bil;
+                        Console.WriteLine(bil + "^ 2 = " + hasil);
+                    }
+                    break;
+                case 'D':
+                    if (bil < 0)
+                    {
+                        hasil = bil * (-1);
+                    }
+                    break;
+                case 'E':
+                    Console.WriteLine(bil);
+                    break;
+                default: Console.WriteLine("Pilihan Salah");
             }
-
-            return text;
         }
 
-        public String select16(int ops1, int ops2)
+        public void OutputSwitchSwitch_20(char abjad, int bil)
         {
-            String text = "";
+            // print abjad dari A s.d E dan angka dari 1 s.d 5 sesuai dengan pasangannya
+            // A1 --> cetak Huruf Perama - satu
+            // selain itu masuk pada kategori lain-lain
 
-            switch (ops1)
+            switch (abjad)
             {
-                case 1:
-                    switch (ops2)
+                case 'A':
+                    switch (bil)
                     {
-                        case 1:
-                            text = "Melihat saldo";
+                        case '1':
+                            Console.WriteLine("Huruf Pertama - satu");
                             break;
-                        default:
-                            text = "Menu Saldo : Masukan Invalid";
+                        case '2':
+                            Console.WriteLine("Huruf Pertama - dua");
                             break;
+                        case '3':
+                            Console.WriteLine("Huruf Pertama - tiga");
+                            break;
+                        case '4':
+                            Console.WriteLine("Huruf Pertama - empat");
+                            break;
+                        case '5':
+                            Console.WriteLine("Huruf Pertama - lima");
+                            break;
+                        default: Console.WriteLine("Pasangan A tidak ada"); break;
                     }
                     break;
-                case 2:
-                    switch (ops2)
+                case 'B':
+                    switch (bil)
                     {
-                        case 1:
-                            text = "Menu Withdraw $20";
+                        case '1':
+                            Console.WriteLine("Huruf Kedua - satu");
                             break;
-                        case 2:
-                            text = "Menu Withdraw $40";
+                        case '2':
+                            Console.WriteLine("Huruf Kedua - dua");
                             break;
-                        case 3:
-                            text = "Nominal Withdraw lainnya";
+                        case '3':
+                            Console.WriteLine("Huruf Kedua - tiga");
                             break;
-                        default:
-                            text = "Menu Withdraw : Masukan Invalid";
+                        case '4':
+                            Console.WriteLine("Huruf Kedua - empat");
                             break;
+                        case '5':
+                            Console.WriteLine("Huruf Kedua - lima");
+                            break;
+                        default: Console.WriteLine("Pasangan B tidak ada"); break;
                     }
                     break;
-                default:
-                    text = "Keluar";
+                case 'C':
+                    switch (bil)
+                    {
+                        case '1':
+                            Console.WriteLine("Huruf Ketiga - satu");
+                            break;
+                        case '2':
+                            Console.WriteLine("Huruf Ketiga - dua");
+                            break;
+                        case '3':
+                            Console.WriteLine("Huruf Ketiga - tiga");
+                            break;
+                        case '4':
+                            Console.WriteLine("Huruf Ketiga - empat");
+                            break;
+                        case '5':
+                            Console.WriteLine("Huruf Ketiga - lima");
+                            break;
+                        default: Console.WriteLine("Pasangan C tidak ada"); break;
+                    }
                     break;
+                case 'D':
+                    switch (bil)
+                    {
+                        case '1':
+                            Console.WriteLine("Huruf Keempat - satu");
+                            break;
+                        case '2':
+                            Console.WriteLine("Huruf Keempat - dua");
+                            break;
+                        case '3':
+                            Console.WriteLine("Huruf Keempat - tiga");
+                            break;
+                        case '4':
+                            Console.WriteLine("Huruf Keempat - empat");
+                            break;
+                        case '5':
+                            Console.WriteLine("Huruf Keempat - lima");
+                            break;
+                        default: Console.WriteLine("Pasangan D tidak ada"); break;
+                    }
+                    break;
+                case 'E':
+                    switch (bil)
+                    {
+                        case '1':
+                            Console.WriteLine("Huruf Kelima - satu");
+                            break;
+                        case '2':
+                            Console.WriteLine("Huruf Kelima - dua");
+                            break;
+                        case '3':
+                            Console.WriteLine("Huruf Kelima - tiga");
+                            break;
+                        case '4':
+                            Console.WriteLine("Huruf Kelima - empat");
+                            break;
+                        case '5':
+                            Console.WriteLine("Huruf Kelima - lima");
+                            break;
+                        default: Console.WriteLine("Pasangan E tidak ada"); break;
+                    }
+                    break;
+                default: Console.WriteLine("Pasangan tidak terbentuk"); break;
+            }
+        }
+
+        public void OutputSwitchSwitch_20_1(char abjad, int bil)
+        {
+            // print abjad dari A s.d E dan angka dari 1 s.d 5 sesuai dengan pasangannya
+            // A1 --> cetak Huruf Perama - satu
+            // selain itu masuk pada kategori lain-lain
+
+            switch (abjad)
+            {
+                case 'A':
+                    switch (bil)
+                    {
+                        case '1':
+                            Console.WriteLine("Huruf Pertama - satu");
+                            break;
+                        case '2':
+                            Console.WriteLine("Huruf Pertama - dua");
+                            break;
+                        case '3':
+                            Console.WriteLine("Huruf Pertama - tiga");
+                            break;
+                        default: Console.WriteLine("Pasangan A tidak ada"); break;
+                    }
+                    break;
+                case 'B':
+                    switch (bil)
+                    {
+                        case '1':
+                            Console.WriteLine("Huruf Kedua - satu");
+                            break;
+                        case '2':
+                            Console.WriteLine("Huruf Kedua - dua");
+                            break;
+                        default: Console.WriteLine("Pasangan B tidak ada"); break;
+                    }
+                    break;
+                case 'C':
+                    Console.WriteLine("Huruf Ketiga - satu");
+                    break;
+                case 'D':
+                    Console.WriteLine("Huruf Keempat");
+                    break;
+                default: Console.WriteLine("Pasangan tidak terbentuk"); break;
+            }
+        }
+
+        // Selection Cukup Rumit
+        public String nilaiTerbilang(int bil)
+        {
+            // mengkonversikan sebuah bilangan dengan range -9999 s.d 9999
+            String terbilang = "";
+            int ribu, ratus, puluh, satuan;
+            String[] terbilangSatuan = {"", "satu ", "dua ", "tiga ", "empat ", "lima ",
+                                    "enam ", "tujuh ", "delapan ", "sembilan "};
+
+            if (bil < 0)
+            {
+                terbilang = "(negatif) ";
+            }
+            else if (bil == 0)
+            {
+                terbilang = "nol";
             }
 
-            return text;
+            ribu = bil / 1000;
+            ratus = (bil % 1000) / 100;
+            puluh = ((bil % 1000) % 100) / 10;
+            satuan = ((bil % 1000) % 100) % 10;
+
+            if (ribu == 1)
+            {
+                terbilang = terbilang + "seribu";
+            }
+            else if (ribu >= 2)
+            {
+                terbilang = terbilang + terbilangSatuan[ribu] + "ribu";
+            }
+
+            if (ratus == 1)
+            {
+                terbilang = terbilang + "seratus";
+            }
+            else if (ribu >= 2)
+            {
+                terbilang = terbilang + terbilangSatuan[ratus] + "ratus";
+            }
+
+            if (puluh == 0)
+            {
+                terbilang = terbilang + terbilangSatuan[satuan];
+            }
+            else if (puluh == 1)
+            {
+                if (satuan == 0)
+                {
+                    terbilang = terbilang + "sepuluh";
+                }
+                else if (satuan == 1)
+                {
+                    terbilang = terbilang + "sebelas";
+                }
+                else if (satuan >= 2)
+                {
+                    terbilang = terbilang + terbilangSatuan[satuan] + "belas";
+                }
+            }
+            else if (puluh >= 2)
+            {
+                terbilang = terbilang + terbilangSatuan[puluh] + "puluh" + terbilangSatuan[satuan];
+            }
+
+            return terbilang;
         }
+
+
     }
 }
