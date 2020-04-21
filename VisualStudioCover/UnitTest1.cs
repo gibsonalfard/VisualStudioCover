@@ -6,43 +6,36 @@ namespace VisualStudioCover
     [TestClass]
     public class UnitTest1
     {
-        public int varA, varB;
+        public int intA, intB, intC, intD;
+        public float flA, flB;
         public Sequence seq = new Sequence();
 
         [TestMethod]
-        public void TestSeq1()
+        public void luasLimas_Test()
         {
-            varA = 6;
-            int result = seq.seq1(varA);
+            flA = 6;
+            flB = 4;
+            float result = seq.luasLimas(flA, flB);
 
-            Assert.AreEqual(result, 13);
+            Assert.AreEqual(result, 84);
         }
 
         [TestMethod]
-        public void TestSeq2()
+        public void persamaanLinear_Test()
         {
-            varA = 4; varB = 3;
-            int result = seq.seq2(varA, varB);
+            intA = 7;
+            int result = seq.persamaanLinear(intA);
 
-            Assert.AreEqual(result, 48);
+            Assert.AreEqual(result, 17);
         }
 
         [TestMethod]
-        public void TestSeq3()
+        public void addDetikWithJam_Test()
         {
-            varA = 2; varB = 5;
-            bool result = seq.seq3(varA, varB);
+            intA = 60;
+            int result = seq.addDetikWithJam(intA, 1, 30, 30);
 
-            Assert.AreEqual(result, false);
-        }
-
-        [TestMethod]
-        public void TestSeq4()
-        {
-            varA = 3; varB = 4;
-            bool result = seq.seq4(varA, varB);
-
-            Assert.AreEqual(result, false);
+            Assert.AreEqual(result, 5490);
         }
     }
 }

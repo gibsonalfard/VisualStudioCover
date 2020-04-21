@@ -140,7 +140,7 @@ namespace VisualStudioCover
         public int getKuadran_09(int x, int y)
         {
             int kuadran = 0;
-            boolean isOnSB = false;
+            bool isOnSB = false;
 
             if (x == 0 && y == 0)
             {
@@ -368,8 +368,10 @@ namespace VisualStudioCover
                     break;
                 case 'E':
                     Console.WriteLine(bil);
+                break;
+                default:
+                    Console.WriteLine("Pilihan Salah");
                     break;
-                default: Console.WriteLine("Pilihan Salah");
             }
         }
 

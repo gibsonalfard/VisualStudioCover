@@ -1,0 +1,6 @@
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debug\VisualStudioCover.dll
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debug\VisualStudioCover.pdb
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\obj\Debug\VisualStudioCover.dll
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\obj\Debug\VisualStudioCover.pdb

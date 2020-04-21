@@ -45,81 +45,81 @@ namespace VisualStudioCover
             return pec1K;
         }
 
-        public boolean isYearKabisat(int idxMonth, int year)
+        public bool isYearKabisat(int idxMonth, int year)
         {
-            boolean isKabisat;
+            bool isKabisat;
 
             isKabisat = ((year % 4 == 0) && (year % 100 > 0)) || (year % 400 == 0);
             return isKabisat;
         }
 
-        public boolean isPointOrigin(int x, int y)
+        public bool isPointOrigin(int x, int y)
         {
-            boolean isOrigin;
+            bool isOrigin;
 
             isOrigin = (x == 0) && (y == 0);
             return isOrigin;
         }
 
-        public boolean isPointKuadran1(int x, int y)
+        public bool isPointKuadran1(int x, int y)
         {
-            boolean isKuadran1;
+            bool isKuadran1;
 
             isKuadran1 = (x > 0) && (y > 0);
             return isKuadran1;
         }
 
-        public boolean isPointKuadran2(int x, int y)
+        public bool isPointKuadran2(int x, int y)
         {
-            boolean isKuadran2;
+            bool isKuadran2;
 
             isKuadran2 = (x < 0) && (y > 0);
             return isKuadran2;
         }
 
-        public boolean isPointKuadran3(int x, int y)
+        public bool isPointKuadran3(int x, int y)
         {
-            boolean isKuadran3;
+            bool isKuadran3;
 
             isKuadran3 = (x < 0) && (y < 0);
             return isKuadran3;
         }
 
-        public boolean isPointKuadran4(int x, int y)
+        public bool isPointKuadran4(int x, int y)
         {
-            boolean isPointKuadran4;
+            bool isPointKuadran4;
 
             isPointKuadran4 = (x > 0) && !(y >= 0);
             return isPointKuadran4;
         }
 
-        public boolean isPointNotOrigin(int x, int y)
+        public bool isPointNotOrigin(int x, int y)
         {
-            boolean isNotOrigin;
+            bool isNotOrigin;
 
             isNotOrigin = (x != 0) || (y != 0);
             return isNotOrigin;
         }
 
-        public boolean isSuhuPadat(int suhu)
+        public bool isSuhuPadat(int suhu)
         {
-            boolean isPadat;
+            bool isPadat;
 
             isPadat = (suhu >= 0 && suhu <= 100);
             return isPadat;
         }
 
-        public boolean isSuhuCair(int suhu)
+        public bool isSuhuCair(int suhu)
         {
-            boolean isCair;
+            bool isCair;
 
             isCair = (suhu <= 0);
             return isCair;
         }
 
-        public boolean isSuhuUap(int suhu)
+        public bool isSuhuUap(int suhu)
         {
-            boolean isUap;
+            bool isUap;
 
             isUap = (suhu >= 100);
             return isUap;

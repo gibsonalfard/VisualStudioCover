@@ -14,11 +14,11 @@ namespace VisualStudioCover
 
             for (i = 1; i <= N; i++)
             {
-                Console.WriteLiine("*");
+                Console.WriteLine("*");
             }
         }
 
-        public int jumBil_22(int bil[], int N)
+        public int jumBil_22(int[] bil, int N)
         {
             int i, sum;
 
@@ -63,10 +63,10 @@ namespace VisualStudioCover
             }
         }
 
-        public boolean cariBil_25(int bil[], int N, int cari)
+        public bool cariBil_25(int[] bil, int N, int cari)
         {
             int i;
-            boolean ketemu = false;
+            bool ketemu = false;
 
             i = 0;
             while (i < N || ketemu == true)
@@ -113,10 +113,10 @@ namespace VisualStudioCover
             }
         }
 
-        public boolean guessNumber_28(int guessBil[], int N, int secret)
+        public bool guessNumber_28(int[] guessBil, int N, int secret)
         {
             int i;
-            boolean ketemu = false;
+            bool ketemu = false;
 
             i = 0;
             while (i < N || ketemu == true)
@@ -289,7 +289,7 @@ namespace VisualStudioCover
             }
         }
 
-        public char[] geserBilKiri_36(char str[], int N, int nGeser)
+        public char[] geserBilKiri_36(char[] str, int N, int nGeser)
         {
             // Geser 3 kali
             // str --> 1, 2, 5, 7
