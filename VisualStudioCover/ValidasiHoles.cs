@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VisualStudioCover
 {
-    class ValidasiHoles
+    public class ValidasiHoles
     {
         private int jumlahLubang;
 
