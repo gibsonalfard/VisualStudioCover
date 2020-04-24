@@ -86,11 +86,11 @@ namespace VisualStudioCover
         {
             if (bil % 2 > 0)
             {
-                Console.WriteLine("Bilangan Ganjil");
+                Console.Write("Bilangan Ganjil");
             }
             else
             {
-                Console.WriteLine("Bilangan Genap");
+                Console.Write("Bilangan Genap");
             }
         }
 
@@ -276,7 +276,7 @@ namespace VisualStudioCover
                         upah = upah + (durasiJamKerja * 2000);
                     }
                     break;
-                default: Console.WriteLine("Golongan tidak ada"); break;
+                default: Console.Write("Golongan tidak ada"); break;
             }
             return upah;
         }
@@ -387,108 +387,108 @@ namespace VisualStudioCover
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Pertama - satu");
+                            Console.Write("Huruf Pertama - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Pertama - dua");
+                            Console.Write("Huruf Pertama - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Pertama - tiga");
+                            Console.Write("Huruf Pertama - tiga");
                             break;
                         case '4':
-                            Console.WriteLine("Huruf Pertama - empat");
+                            Console.Write("Huruf Pertama - empat");
                             break;
                         case '5':
-                            Console.WriteLine("Huruf Pertama - lima");
+                            Console.Write("Huruf Pertama - lima");
                             break;
-                        default: Console.WriteLine("Pasangan A tidak ada"); break;
+                        default: Console.Write("Pasangan A tidak ada"); break;
                     }
                     break;
                 case 'B':
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Kedua - satu");
+                            Console.Write("Huruf Kedua - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Kedua - dua");
+                            Console.Write("Huruf Kedua - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Kedua - tiga");
+                            Console.Write("Huruf Kedua - tiga");
                             break;
                         case '4':
-                            Console.WriteLine("Huruf Kedua - empat");
+                            Console.Write("Huruf Kedua - empat");
                             break;
                         case '5':
-                            Console.WriteLine("Huruf Kedua - lima");
+                            Console.Write("Huruf Kedua - lima");
                             break;
-                        default: Console.WriteLine("Pasangan B tidak ada"); break;
+                        default: Console.Write("Pasangan B tidak ada"); break;
                     }
                     break;
                 case 'C':
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Ketiga - satu");
+                            Console.Write("Huruf Ketiga - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Ketiga - dua");
+                            Console.Write("Huruf Ketiga - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Ketiga - tiga");
+                            Console.Write("Huruf Ketiga - tiga");
                             break;
                         case '4':
-                            Console.WriteLine("Huruf Ketiga - empat");
+                            Console.Write("Huruf Ketiga - empat");
                             break;
                         case '5':
-                            Console.WriteLine("Huruf Ketiga - lima");
+                            Console.Write("Huruf Ketiga - lima");
                             break;
-                        default: Console.WriteLine("Pasangan C tidak ada"); break;
+                        default: Console.Write("Pasangan C tidak ada"); break;
                     }
                     break;
                 case 'D':
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Keempat - satu");
+                            Console.Write("Huruf Keempat - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Keempat - dua");
+                            Console.Write("Huruf Keempat - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Keempat - tiga");
+                            Console.Write("Huruf Keempat - tiga");
                             break;
                         case '4':
-                            Console.WriteLine("Huruf Keempat - empat");
+                            Console.Write("Huruf Keempat - empat");
                             break;
                         case '5':
-                            Console.WriteLine("Huruf Keempat - lima");
+                            Console.Write("Huruf Keempat - lima");
                             break;
-                        default: Console.WriteLine("Pasangan D tidak ada"); break;
+                        default: Console.Write("Pasangan D tidak ada"); break;
                     }
                     break;
                 case 'E':
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Kelima - satu");
+                            Console.Write("Huruf Kelima - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Kelima - dua");
+                            Console.Write("Huruf Kelima - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Kelima - tiga");
+                            Console.Write("Huruf Kelima - tiga");
                             break;
                         case '4':
-                            Console.WriteLine("Huruf Kelima - empat");
+                            Console.Write("Huruf Kelima - empat");
                             break;
                         case '5':
-                            Console.WriteLine("Huruf Kelima - lima");
+                            Console.Write("Huruf Kelima - lima");
                             break;
-                        default: Console.WriteLine("Pasangan E tidak ada"); break;
+                        default: Console.Write("Pasangan E tidak ada"); break;
                     }
                     break;
-                default: Console.WriteLine("Pasangan tidak terbentuk"); break;
+                default: Console.Write("Pasangan tidak terbentuk"); break;
             }
         }
 
@@ -504,36 +504,36 @@ namespace VisualStudioCover
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Pertama - satu");
+                            Console.Write("Huruf Pertama - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Pertama - dua");
+                            Console.Write("Huruf Pertama - dua");
                             break;
                         case '3':
-                            Console.WriteLine("Huruf Pertama - tiga");
+                            Console.Write("Huruf Pertama - tiga");
                             break;
-                        default: Console.WriteLine("Pasangan A tidak ada"); break;
+                        default: Console.Write("Pasangan A tidak ada"); break;
                     }
                     break;
                 case 'B':
                     switch (bil)
                     {
                         case '1':
-                            Console.WriteLine("Huruf Kedua - satu");
+                            Console.Write("Huruf Kedua - satu");
                             break;
                         case '2':
-                            Console.WriteLine("Huruf Kedua - dua");
+                            Console.Write("Huruf Kedua - dua");
                             break;
-                        default: Console.WriteLine("Pasangan B tidak ada"); break;
+                        default: Console.Write("Pasangan B tidak ada"); break;
                     }
                     break;
                 case 'C':
-                    Console.WriteLine("Huruf Ketiga - satu");
+                    Console.Write("Huruf Ketiga - satu");
                     break;
                 case 'D':
-                    Console.WriteLine("Huruf Keempat");
+                    Console.Write("Huruf Keempat");
                     break;
-                default: Console.WriteLine("Pasangan tidak terbentuk"); break;
+                default: Console.Write("Pasangan tidak terbentuk"); break;
             }
         }
 

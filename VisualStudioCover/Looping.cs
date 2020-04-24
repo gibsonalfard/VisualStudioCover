@@ -14,7 +14,7 @@ namespace VisualStudioCover
 
             for (i = 1; i <= N; i++)
             {
-                Console.WriteLine("*");
+                Console.Write("*");
             }
         }
 
@@ -55,7 +55,7 @@ namespace VisualStudioCover
             {
                 if (nilai % i == 0)
                 {
-                    Console.WriteLine(i /* tampilkan bilangan ketika nilainya
+                    Console.Write(i /* tampilkan bilangan ketika nilainya
                                     * merupakan modulus dari nilai yang dicari
                                     */
                                      + " ");
@@ -155,11 +155,11 @@ namespace VisualStudioCover
             {
                 if (i % X == 0)
                 {
-                    Console.WriteLine("* ");
+                    Console.Write("* ");
                 }
                 else
                 {
-                    Console.WriteLine(i + " ");
+                    Console.Write(i + " ");
                 }
             } while (i <= N);
         }
@@ -267,7 +267,7 @@ namespace VisualStudioCover
             {
                 for (j = 1; j <= i; j++)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                 }
                 Console.WriteLine();
             }
@@ -282,7 +282,7 @@ namespace VisualStudioCover
             {
                 for (j = 1; j <= i; j++)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                 }
                 Console.WriteLine();
                 i = i + 1;
@@ -324,12 +324,12 @@ namespace VisualStudioCover
                 j = 1;
                 while (j < i)
                 {
-                    Console.WriteLine(" ");
+                    Console.Write(" ");
                     j = j + 1;
                 }
                 while (j <= N)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                     j = j + 1;
                 }
                 Console.WriteLine();
