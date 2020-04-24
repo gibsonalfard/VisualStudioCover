@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VisualStudioCover
 {
-    class Faktorial
+    public class Faktorial
     {
         public static int factorial(int bilangan)
         {
