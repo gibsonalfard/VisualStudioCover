@@ -3,3 +3,4 @@ D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debu
 D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\obj\Debug\VisualStudioCover.dll
 D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\obj\Debug\VisualStudioCover.pdb
 D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\obj\Debug\VisualStudioCover.csprojResolveAssemblyReference.cache
+D:\!!dataKuliah\VisualStudioProject\VisualStudioCover\VisualStudioCover\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
