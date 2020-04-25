@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VisualStudioCover
 {
-    public class Kombinasi
+    class Kombinasi
     {
         public void OutputBintang_42(int N)
         {
