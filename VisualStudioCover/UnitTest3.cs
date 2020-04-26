@@ -254,7 +254,7 @@ namespace VisualStudioCover
 
             // Masuk Loop 1 dan Loop 2
             result = loop.geserBilKiri_36(text, 5, 1);
-            Assert.AreEqual(result, actual);
+            Assert.AreSame(result, text);
         }
 
         [TestMethod]
