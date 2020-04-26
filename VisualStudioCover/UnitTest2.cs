@@ -58,7 +58,7 @@ namespace VisualStudioCover
             dblC = 100;
             intA = 14;
 
-            char result = sel.hitNilaiMutu06(dblA, dblB, dblC, intA);
+            char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
             Assert.AreEqual(result,'A');
         }
@@ -71,7 +71,7 @@ namespace VisualStudioCover
             dblC = 70;
             intA = 14;
 
-            char result = sel.hitNilaiMutu06(dblA, dblB, dblC, intA);
+            char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
             Assert.AreEqual(result, 'B');
         }
@@ -84,7 +84,7 @@ namespace VisualStudioCover
             dblC = 55;
             intA = 9;
 
-            char result = sel.hitNilaiMutu06(dblA, dblB, dblC, intA);
+            char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
             Assert.AreEqual(result, 'C');
         }
@@ -97,7 +97,7 @@ namespace VisualStudioCover
             dblC = 40;
             intA = 6;
 
-            char result = sel.hitNilaiMutu06(dblA, dblB, dblC, intA);
+            char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
             Assert.AreEqual(result, 'D');
         }
@@ -110,7 +110,7 @@ namespace VisualStudioCover
             dblC = 0;
             intA = 0;
 
-            char result = sel.hitNilaiMutu06(dblA, dblB, dblC, intA);
+            char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
             Assert.AreEqual(result, 'E');
         }
@@ -121,7 +121,7 @@ namespace VisualStudioCover
             intA = 7;
             intB = 8;
 
-            int result = sel.hitNilaiMutu06(intA, intB);
+            int result = sel.getUpah_063(intA, intB);
 
             Assert.AreEqual(result, 2000);
         }
@@ -132,7 +132,7 @@ namespace VisualStudioCover
             intA = 8;
             intB = 7;
 
-            int result = sel.hitNilaiMutu06(intA, intB);
+            int result = sel.getUpah_063(intA, intB);
 
             Assert.AreEqual(result, 6500);
         }
@@ -144,15 +144,25 @@ namespace VisualStudioCover
             intA = 7;
             intB = 7;
 
-            int result = sel.hitNilaiMutu06(intA, intB);
+            int result = sel.getUpah_063(intA, intB);
 
             Assert.AreEqual(result, 2000);
         }
 /*==================================================================================*/
-        [TestMethod] //test method ini belum selesai
+        [TestMethod]
         public void menentukanBilGanjil_064_Test()
         {
             intA = 3;
+
+            sel.menentukanBilGanjil_064(intA);
+        }
+
+        [TestMethod]
+        public void menentukanBilGanjil_064_Test()
+        {
+            intA = 2;
+
+            sel.menentukanBilGanjil_064(intA);
         }
 /*==================================================================================*/
         [TestMethod]
@@ -225,13 +235,13 @@ namespace VisualStudioCover
             Assert.AreEqual(result, "Sabtu");
         }
 /*==================================================================================*/
-        [TestMethod] //Test method ini belum selesai
+        [TestMethod]
         public void tukarNominalUang_08_Test()
         {
             intA = 100000;
             intB = 90000;
 
-            int result = sel.tukarNominal_08(intA, intB);
+            sel.tukarNominal_08(intA, intB);
         }
 /*==================================================================================*/
         [TestMethod]
