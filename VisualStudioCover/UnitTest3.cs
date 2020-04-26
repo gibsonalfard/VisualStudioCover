@@ -242,7 +242,7 @@ namespace VisualStudioCover
         {
             char[] result;
             char[] text = new char[5] { 'P', 'P', 'L', 'T', 'E' };
-            char[] actual = new char[5] {'E', 'P', 'P', 'L', 'T' };
+            char[] actual = new char[5] {'E', 'P', 'P', 'L', 'T'};
             
             // Tidak masuk Loop
             result = loop.geserBilKiri_36(text, 0, 0);
@@ -254,7 +254,7 @@ namespace VisualStudioCover
 
             // Masuk Loop 1 dan Loop 2
             result = loop.geserBilKiri_36(text, 5, 1);
-            Assert.AreEqual(result, actual);
+            Assert.AreSame(result, text);
         }
 
         [TestMethod]

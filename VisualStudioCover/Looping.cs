@@ -69,7 +69,7 @@ namespace VisualStudioCover
             bool ketemu = false;
 
             i = 0;
-            while (i < N || ketemu == true)
+            while (i < N && ketemu != true)
             {
                 if (bil[i] == cari)
                 {
@@ -97,8 +97,9 @@ namespace VisualStudioCover
                 }
                 else
                 {
+                    // Dimodifikasi
                     deretGenap[nGenap] = i;
-                    nGanjil = nGenap + 1;
+                    nGenap = nGenap + 1;
                 }
             }
             Console.WriteLine("Deret Ganjil");
@@ -119,7 +120,7 @@ namespace VisualStudioCover
             bool ketemu = false;
 
             i = 0;
-            while (i < N || ketemu == true)
+            while (i < N && ketemu != true)
             {
                 if (guessBil[i] < secret)
                 {
