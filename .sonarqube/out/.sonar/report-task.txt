@@ -1,0 +1,6 @@
+projectKey=VisualStudioCover
+serverUrl=http://localhost:9000
+serverVersion=8.2.0.32929
+dashboardUrl=http://localhost:9000/dashboard?id=VisualStudioCover
+ceTaskId=AXHFLkb6heE6Rv0LQgQm
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXHFLkb6heE6Rv0LQgQm
