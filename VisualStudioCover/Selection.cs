@@ -29,7 +29,7 @@ namespace VisualStudioCover
             char nilaiMutu = ' ';
             float nilai, nilaiHadir;
 
-            nilaiHadir = hadir / 14 * 100f;
+            nilaiHadir = (hadir / 14) * 100f;
             nilai = (float)((0.3 * uts) + (0.4 * uas) + (0.2 * tugas) + (0.1 * nilaiHadir));
 
             if (nilai >= 85)

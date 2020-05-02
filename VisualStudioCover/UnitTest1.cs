@@ -46,7 +46,6 @@ namespace VisualStudioCover
             Assert.AreEqual(result, 0);
         }
         
-        /*
         [TestMethod]
         public void isYearKabisat_Test1()
         {
@@ -67,7 +66,7 @@ namespace VisualStudioCover
         }
 
         // IsKabisat jadi 100% karena Test1 bernilai True dan Test2 bernilai False, sehingga branch nya terpenuhi dua-dua nya
-        */
+        
         [TestMethod]
         public void isYearKabisat_Test3()
         {

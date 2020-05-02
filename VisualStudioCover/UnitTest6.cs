@@ -42,15 +42,21 @@ namespace VisualStudioCover
         }
 /*==================================================================================*/
         [TestMethod]
+        public void countHoles_Test4()
+        {
+            strA = "AKB";
+            ValHol.countHoles(strA);
+        }
+/*==================================================================================*/
+       [TestMethod]
         public void getJumlahLubang_Test()
         {
             // getJumlahLubang berfungsi untuk mengambil nilai jumlahLubang
-            // nilai jumlahLubang selalu ditambah pada objek yang sama
-            // Sehingga akumulasi sampai dengan pemanggilan saat ini adalah 3
-            // 1 untuk Test dan 2 untuk Test1
             int result = ValHol.getJumlahLubang();
-            Assert.AreEqual(result, 3);
+            Console.WriteLine(result);
+            Assert.AreEqual(result, 0);
         }
 /*==================================================================================*/
+
     }
 }

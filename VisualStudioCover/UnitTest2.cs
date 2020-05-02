@@ -82,7 +82,7 @@ namespace VisualStudioCover
             dblA = 55;
             dblB = 55;
             dblC = 55;
-            intA = 9;
+            intA = 14;
 
             char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
@@ -95,7 +95,7 @@ namespace VisualStudioCover
             dblA = 40;
             dblB = 40;
             dblC = 40;
-            intA = 6;
+            intA = 14;
 
             char result = sel.hitNilaiMutu_06(dblA, dblB, dblC, intA);
 
@@ -208,7 +208,7 @@ namespace VisualStudioCover
         [TestMethod]
         public void getDayFromNumber07_Test4()
         {
-            intA = 1;
+            intA = 4;
 
             string result = sel.getDayFromNumber_07(intA);
 
@@ -218,7 +218,7 @@ namespace VisualStudioCover
         [TestMethod]
         public void getDayFromNumber07_Test5()
         {
-            intA = 1;
+            intA = 5;
 
             string result = sel.getDayFromNumber_07(intA);
 
@@ -228,7 +228,7 @@ namespace VisualStudioCover
         [TestMethod]
         public void getDayFromNumber07_Test6()
         {
-            intA = 1;
+            intA = 6;
 
             string result = sel.getDayFromNumber_07(intA); ;
 

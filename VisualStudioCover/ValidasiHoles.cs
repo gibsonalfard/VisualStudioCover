@@ -8,7 +8,7 @@ namespace VisualStudioCover
 {
     public class ValidasiHoles
     {
-        private int jumlahLubang;
+        private int jumlahLubang = 0;
 
         public void countHoles(String sentence)
         {
