@@ -46,6 +46,7 @@ namespace VisualStudioCover
             Assert.AreEqual(result, 0);
         }
         
+        /*
         [TestMethod]
         public void isYearKabisat_Test1()
         {
@@ -66,6 +67,34 @@ namespace VisualStudioCover
         }
 
         // IsKabisat jadi 100% karena Test1 bernilai True dan Test2 bernilai False, sehingga branch nya terpenuhi dua-dua nya
+        */
+        [TestMethod]
+        public void isYearKabisat_Test3()
+        {
+            // Test untuk Condition Coverage, terdapat 8 Variasi, seluruh condition harus masuk
+            // Condition is 
+            // ((year % 4 == 0) && (year % 100 > 0)) || (year % 400 == 0)
+            bool result;
+            
+            // ((F && T) || F)
+            // result = seq.isYearKabisat(1, 2002);
+            // Assert.AreEqual(result, false);
+
+            // ((T && F) || F)
+            result = seq.isYearKabisat(1, 1900);
+            Assert.AreEqual(result, false);
+
+            // ((T && F) || T)
+            // result = seq.isYearKabisat(1, 2000);
+            // Assert.AreEqual(result, true);
+
+            // ((T && T) || F)
+            // result = seq.isYearKabisat(1, 2012);
+            // Assert.AreEqual(result, true);
+
+            // Varias Condition lain sulit dicapai
+            // Dengan kondisi yang ada. 
+        }
 
         [TestMethod]
         public void isPointOrigin_Test1()
@@ -85,6 +114,7 @@ namespace VisualStudioCover
             Assert.AreEqual(result, true);
         }
 
+        /*
         [TestMethod]
         public void isPointOrigin_Test3()
         {
@@ -93,7 +123,7 @@ namespace VisualStudioCover
 
             Assert.AreEqual(result, false);
         }
-
+        */
         [TestMethod]
         public void isPointKuadran1_Test1()
         {
