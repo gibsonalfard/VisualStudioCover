@@ -46,7 +46,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -59,7 +61,10 @@
     <Compile Include="Sequence.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="UnitTest2.cs" />
+<<<<<<< HEAD
     <Compile Include="UnitTest3.cs" />
+=======
+>>>>>>> Kombinasi
     <Compile Include="UnitTest4.cs" />
     <Compile Include="ValidasiHoles.cs" />
   </ItemGroup>

@@ -54,7 +54,8 @@ namespace VisualStudioCover
                 k = N - 1;
                 do
                 {
-                    for (i = 0; i <= k; i++)
+                    // for i<=k saya ganti jadi i<k
+                    for (i = 0; i < k; i++)
                     {
                         if (bil[i] > bil[i + 1])
                         {
@@ -76,7 +77,9 @@ namespace VisualStudioCover
             String status = "tidak ketemu";
             int i;
 
-            if (N > 0)
+            // Kondisi dimodifikasi menjadi N <= 0
+            // Agar tidak bertentangan dengan for
+            if (N <= 0)
             {
                 status = "Deretan Bilangan Kosong";
             }
@@ -119,10 +122,15 @@ namespace VisualStudioCover
                 if (bil != 0)
                 {
                     i = 0;
-                    while (i < pangkat)
+                    // Kondisi i < pangkat diubah
+                    // Karena bertentangan dengan pangkat < 0
+                    // i < pangkat -> i > pangkat
+                    while (i > pangkat)
                     {
                         result = result * 1 / bil;
-                        i = i + 1;
+                        // Untuk pendukung perubahan yang ada
+                        // i + 1 -> i - 1
+                        i = i - 1;
                     }
                 }
                 else
@@ -209,7 +217,10 @@ namespace VisualStudioCover
                 {
                     idx = -2;
                     i = 0;
-                    while (i < N || ketemu == true)
+                    // kondisi pada while diganti
+                    // karena dapat menyebabkan infinite loop
+                    // || -> &&, ketemu == true -> ketemu == false
+                    while (i < N && ketemu == false)
                     {
                         if (bil[i] == cari)
                         {
