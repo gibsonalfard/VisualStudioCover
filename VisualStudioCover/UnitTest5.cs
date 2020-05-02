@@ -14,7 +14,7 @@ namespace VisualStudioCover
         public Faktorial Fak = new Faktorial();
 /*==================================================================================*/
         [TestMethod]
-        public void factorial_Test()
+        public void factorial_Test1()
         {
             intA = -1;
             int result = Fak.factorial(intA);
@@ -22,7 +22,7 @@ namespace VisualStudioCover
         }
 
         [TestMethod]
-        public void factorial_Test()
+        public void factorial_Test2()
         {
             intA = 1;
             int result = Fak.factorial(intA);
