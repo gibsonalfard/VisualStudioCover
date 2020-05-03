@@ -20,7 +20,7 @@ namespace VisualStudioCover
             int result = Fak.factorial(intA);
             Assert.AreEqual(result, -1);
         }
-
+/*==================================================================================*/
         [TestMethod]
         public void factorial_Test2()
         {
